@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 /**
  * Purpose: This class is used for to take input from used perform the Operartion
- * @author  PRASHANT PHAD
+ * @author  Prajakta sawant
  *
  */
 
