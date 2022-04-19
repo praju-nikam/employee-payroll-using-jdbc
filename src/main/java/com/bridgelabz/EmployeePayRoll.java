@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class EmployeePayRoll {
     public static void main(String[] args) {
-        System.out.println("Wel come to Employee pay roll");
+        EmployeeConfig eConfig = new EmployeeConfig();
+        eConfig.getConfig();
     }
 }
