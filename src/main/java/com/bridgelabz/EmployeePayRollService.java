@@ -33,13 +33,11 @@ public class EmployeePayRollService {
                 employee.setEmpName(resultSet.getString("Name"));
                 employee.setPhoneNumber(resultSet.getInt("PhoneNumber"));
                 employee.setAddress(resultSet.getString("Address"));
-                employee.setDepartment(resultSet.getString("Department"));
                 employee.setEmpStart(resultSet.getString("Start"));
-                employee.setBasicPay(resultSet.getDouble("BasicPay"));
+                employee.setBasicPay(resultSet.getDouble("Basic_Pay"));
                 employee.setDeductions(resultSet.getDouble("Deductions"));
-                employee.setTaxablePay(resultSet.getDouble("TaxablePay"));
-                employee.setIncomeTax(resultSet.getDouble("IncomeTax"));
-                employee.setNetPay(resultSet.getDouble("NetPay"));
+                employee.setTaxablePay(resultSet.getDouble("Taxable_Pay"));
+                employee.setNetPay(resultSet.getDouble("Net_Pay"));
                 empList.add(employee);
             }
         } catch (SQLException e) {
@@ -103,13 +101,11 @@ public class EmployeePayRollService {
                 employee.setEmpName(resultSet.getString("Name"));
                 employee.setPhoneNumber(resultSet.getInt("PhoneNumber"));
                 employee.setAddress(resultSet.getString("Address"));
-                employee.setDepartment(resultSet.getString("Department"));
                 employee.setEmpStart(resultSet.getString("Start"));
-                employee.setBasicPay(resultSet.getDouble("BasicPay"));
+                employee.setBasicPay(resultSet.getDouble("Basic_Pay"));
                 employee.setDeductions(resultSet.getDouble("Deductions"));
-                employee.setTaxablePay(resultSet.getDouble("TaxablePay"));
-                employee.setIncomeTax(resultSet.getDouble("IncomeTax"));
-                employee.setNetPay(resultSet.getDouble("NetPay"));
+                employee.setTaxablePay(resultSet.getDouble("Taxable_Pay"));               
+                employee.setNetPay(resultSet.getDouble("Net_Pay"));
 
                 empSelected.add(employee);
             }
@@ -136,21 +132,21 @@ public class EmployeePayRollService {
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    calculateQuery("SELECT Gender, SUM(BasicPay) FROM employeepayroll GROUP BY Gender");
+                    calculateQuery("SELECT Gender, SUM(Basic_Pay) FROM employeepayroll GROUP BY Gender");
                     break;
 
                 case 2:
-                    calculateQuery("SELECT Gender, AVG(BasicPay) FROM employeepayroll GROUP BY Gender");
+                    calculateQuery("SELECT Gender, AVG(Basic_Pay) FROM employeepayroll GROUP BY Gender");
                     break;
 
                 case 3:
-                    calculateQuery("SELECT Gender, MIN(BasicPay) FROM employeepayroll GROUP BY Gender");
+                    calculateQuery("SELECT Gender, MIN(Basic_Pay) FROM employeepayroll GROUP BY Gender");
                     break;
                 case 4:
-                    calculateQuery("SELECT Gender, MAX(BasicPay) FROM employeepayroll GROUP BY Gender");
+                    calculateQuery("SELECT Gender, MAX(Basic_Pay) FROM employeepayroll GROUP BY Gender");
                     break;
                 case 5:
-                    calculateQuery("SELECT Gender, COUNT(BasicPay) FROM employeepayroll GROUP BY Gender");
+                    calculateQuery("SELECT Gender, COUNT(Basic_Pay) FROM employeepayroll GROUP BY Gender");
                     break;
             }
         }
