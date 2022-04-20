@@ -1,110 +1,96 @@
 package com.bridgelabz;
 public class Employee {
-    int EmpId;
-    String EmpName, PhoneNumber, Address, Department, EmpStart, Gender;
-    double BasicPay, Deductions, TaxablePay, IncomeTax, NetPay;
+    int empId;
+    String empName, phoneNumber, address, empStart,gender;
+    double basicPay, deductions, taxablePay, incomeTax, netPay;
 
     public int getEmpId() {
-        return EmpId;
+        return empId;
     }
 
     public void setEmpId(int empId) {
-        EmpId = empId;
+        empId = empId;
     }
 
     public String getEmpName() {
-        return EmpName;
+        return empName;
     }
 
     public void setEmpName(String empName) {
-        EmpName = empName;
+        empName = empName;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        phoneNumber = phoneNumber;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        address = address;
     }
 
-    public String getDepartment() {
-        return Department;
-    }
-
-    public void setDepartment(String department) {
-        Department = department;
-    }
 
     public String getEmpStart() {
-        return EmpStart;
+        return empStart;
     }
 
     public void setEmpStart(String empStart) {
-        EmpStart = empStart;
+        empStart = empStart;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        gender = gender;
     }
 
     public double getBasicPay() {
-        return BasicPay;
+        return basicPay;
     }
 
     public void setBasicPay(double basicPay) {
-        BasicPay = basicPay;
+        basicPay = basicPay;
     }
 
     public double getDeductions() {
-        return Deductions;
+        return deductions;
     }
 
     public void setDeductions(double deductions) {
-        Deductions = deductions;
+        deductions = deductions;
     }
 
     public double getTaxablePay() {
-        return TaxablePay;
+        return taxablePay;
     }
 
     public void setTaxablePay(double taxablePay) {
-        TaxablePay = taxablePay;
+        taxablePay = taxablePay;
     }
 
-    public double getIncomeTax() {
-        return IncomeTax;
-    }
-
-    public void setIncomeTax(double incomeTax) {
-        IncomeTax = incomeTax;
-    }
 
     public double getNetPay() {
-        return NetPay;
+        return netPay;
     }
 
     public void setNetPay(double netPay) {
-        NetPay = netPay;
+        netPay = netPay;
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "EmpId=" + EmpId + ", EmpName='" + EmpName + '\'' + ", PhoneNumber='" + PhoneNumber + '\''
-                + ", Address='" + Address + '\'' + ", Department='" + Department + '\'' + ", EmpStart='" + EmpStart
-                + '\'' + ", Gender='" + Gender + '\'' + ", BasicPay=" + BasicPay + ", Deductions=" + Deductions
-                + ", TaxablePay=" + TaxablePay + ", IncomeTax=" + IncomeTax + ", NetPay=" + NetPay + '}';
+        return "Employee{" + "EmpId=" + empId + ", EmpName='" + empName + '\'' + ", PhoneNumber='" + phoneNumber + '\''
+                + ", Address='" + address + '\'' + ",  EmpStart='" + empStart
+                + '\'' + ", Gender='" + gender + '\'' + ", BasicPay=" + basicPay + ", Deductions=" + deductions
+                + ", TaxablePay=" + taxablePay + ", NetPay=" + netPay + '}';
     }
 }
